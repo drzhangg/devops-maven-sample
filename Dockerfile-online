@@ -2,6 +2,8 @@ FROM java:8u92-jre-alpine
 
 WORKDIR /home
 
+RUN echo "Asia/Shanghai" > /etc/timezone
+
 COPY target/*.jar /home
 
 ENTRYPOINT java -jar *.jar
